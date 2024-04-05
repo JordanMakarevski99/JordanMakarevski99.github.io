@@ -387,7 +387,7 @@ $(document).ready(function () {
   // This function is to display a movie, creating a card for each movie in the array.
   function displayMovie(movie) {
     var poster =
-      '<div class="col-lg-4  align-items-stretch mt-5" role="button">' +
+      '<div class="col-lg-4  align-items-stretch mt-5 mb-3" role="button">' +
       '<div class="card h-100" >' +
       '<div class="card-body bg-light">' +
       '<h5 class="card-title text-center">' +
