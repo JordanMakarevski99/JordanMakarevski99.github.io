@@ -339,7 +339,7 @@ $(document).ready(function () {
 
   // I created a button which allows the user to generate a new quote if they choose to do so.
   $("#newQuoteBtn").on("click", function () {
-    displayNewQuote();
+    addQuote();
   });
 
   function displayMovies(genre) {
