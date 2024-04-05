@@ -323,6 +323,18 @@ $(document).ready(function () {
       genre: "Science Fiction",
     },
   ];
+  displayMovies("All");
+  // I am saving the movies to the local storage, so that when a user adds a new movie and refreshes the page, the new movie is still available.
+  function saveMoviesToStorage() {
+    localStorage.setItem("movies", JSON.stringify(movies));
+  }
+
+  if (!localStorage.getItem("movies")) {
+    saveMoviesToStorage();
+  }
+  movies = localStorage.getItem("movies")
+    ? JSON.parse(localStorage.getItem("movies"))
+    : [];
 
   // I used dummyjson api for the quotes because the one you sent me didn't work. They have some server issues.
   function addQuote() {
@@ -429,7 +441,7 @@ $(document).ready(function () {
     };
 
     movies.push(newMovie);
-
+    saveMoviesToStorage();
     displayMovies("All");
 
     $("#title").val("");
