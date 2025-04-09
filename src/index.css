@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-text-primary font-sans antialiased;
+     /* Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Base Heading Styles */
+  h1, h2, h3, h4, h5, h6 {
+     @apply text-text-primary font-semibold;
+  }
+
+  h2 { /* Section Titles */
+      @apply text-3xl sm:text-4xl font-bold text-center mb-12 md:mb-16; /* Adjusted size and margin */
+  }
+
+   /* Subtle links */
+  a {
+     @apply text-primary hover:text-primary-focus transition-colors duration-200;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1E293B; /* card color */
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; /* border-color */
+  border-radius: 5px;
+  border: 2px solid #1E293B; /* track color */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8; /* secondary color */
+}
