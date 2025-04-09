@@ -38,8 +38,7 @@ const Contact = ({ id, setActiveSection }) => {
         <h2 className='text-primary'>Get In Touch</h2>
         <p className='text-lg text-text-secondary text-center max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed'>
           {' '}
-          I'm actively looking for new challenges and opportunities. Whether you
-          have a question, a proposal, or just want to say hi, feel free to
+          Whether you have a question, a proposal, or just want to say hi, feel free to
           reach out!
         </p>
         <div className='max-w-lg mx-auto'>

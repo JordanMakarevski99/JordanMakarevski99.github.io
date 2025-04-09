@@ -6,7 +6,7 @@ import cvFile from './assets/jordan_makarevski_cv.pdf';
 export const personalInfo = {
   name: "Jordan Makarevski",
   title: "Software Developer",
-  location: "Skopje, North Macedonia",
+  location: "Strumica, North Macedonia",
   email: "jordanmakarevski@gmail.com",
   phone: "+389 78 432 210",
   cv: cvFile,
@@ -17,7 +17,7 @@ export const personalInfo = {
   contact: [
      { text: "+389 78 432 210", icon: FaPhone },
      { text: "jordanmakarevski@gmail.com", icon: FaEnvelope },
-     { text: "Skopje, North Macedonia", icon: FaMapMarkerAlt },
+     { text: "Strumica, North Macedonia", icon: FaMapMarkerAlt },
   ]
 };
 
@@ -52,7 +52,7 @@ export const experience = [
   {
     title: "Frontend Developer",
     company: "Steets",
-    location: "Skopje, North Macedonia",
+    location: "Strumica, North Macedonia",
     duration: "January 2025 - Present",
     description: [
       "Developing and maintaining user-facing features using modern frontend frameworks.",
@@ -64,7 +64,7 @@ export const experience = [
   {
     title: "Software Developer",
     company: "CodeIT Solution",
-    location: "Skopje, North Macedonia",
+    location: "Strumica, North Macedonia",
     duration: "February 2022 - November 2023",
     description: [
       "Created engaging user interfaces using front-end frameworks like Angular and React.",
@@ -78,7 +78,7 @@ export const experience = [
   {
     title: "Software Developer",
     company: "MegaSoft",
-    location: "Skopje, North Macedonia",
+    location: "Strumica, North Macedonia",
     duration: "July 2021 - December 2021",
     description: [
       "Developed a responsive and intuitive user interface using React, enhancing ease of navigation.",
@@ -90,7 +90,7 @@ export const experience = [
   {
     title: "Intern Software Developer",
     company: "ITgma",
-    location: "Skopje, North Macedonia",
+    location: "Strumica, North Macedonia",
     duration: "March 2021 - June 2021",
     description: [
       "Acquired knowledge of Angular and introduced to Agile software development.",
@@ -102,7 +102,7 @@ export const experience = [
 
 export const education = [
   {
-    institution: "University Of Computer Science and Engineering - Skopje",
+    institution: "University Of Computer Science and Engineering - Strumica",
     degree: "Computer Science and Engineering",
     duration: "2017 - 2022",
   },

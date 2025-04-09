@@ -74,7 +74,7 @@ const Hero = () => {
            className="text-lg md:text-xl text-secondary mb-10 max-w-xl mx-auto"
            variants={itemVariants}
          >
-            Building dynamic and intuitive web experiences from Skopje, North Macedonia.
+            Building dynamic and intuitive web experiences from Strumica, North Macedonia.
           </motion.p>
          <motion.div
             className="flex justify-center space-x-6 mb-12"
