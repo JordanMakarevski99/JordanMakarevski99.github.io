@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaSyncAlt, FaPuzzlePiece, FaBrain } from 'react-icons/fa'; // Added FaSyncAlt, FaPuzzlePiece, FaBrain
 import { SiReact, SiNodedotjs, SiAngular, SiVuedotjs, SiJavascript, SiTypescript, SiHtml5, SiCss3, SiTailwindcss, SiSpring, SiGraphql, SiMysql, SiGit } from 'react-icons/si';
 import { MdApi } from 'react-icons/md';
-import cvFile from './assets/jordan_makarevski_cv.pdf';
+import cvFile from './assets/CV_Jordan_Makarevski.pdf';
 
 export const personalInfo = {
   name: "Jordan Makarevski",
@@ -124,8 +124,8 @@ export const projects = [
   {
     title: "Products Store App",
     description: "This project showcases a modern e-commerce UI built using React and Tailwind CSS, featuring intuitive product navigation (search, sort, paginate) and a complete cart-to-checkout user flow simulation.",
-    technologies: ["React", "Node.js", "Express", "MySQL", "RESTful API"],
-    imageUrl: "../public/img/product-store.png",
+    technologies: ["React", "Tailwind CSS", "Vite"],
+    imageUrl: "/images/product-store.png",
     githubUrl: "https://github.com/jordanmakarevski99/products-store",
     liveUrl: "https://jordanmakarevski99.github.io/products-store/",
   },
@@ -133,7 +133,7 @@ export const projects = [
     title: "Recipe Meal Planner",
     description: "This React and Tailwind application integrates with TheMealDB, allowing users to search recipes, visually plan weekly meals using drag-and-drop, and automatically generate a corresponding grocery list.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-    imageUrl: "../public/img/recipe-planner.png",
+    imageUrl: "/images/recipe-planner.png",
     githubUrl: "https://github.com/jordanmakarevski99/recipe-meal-planner",
     liveUrl: "https://jordanmakarevski99.github.io/recipe-meal-planner",
   },
@@ -141,7 +141,7 @@ export const projects = [
     title: "Trivia Quiz",
     description: "Challenge your trivia knowledge with an interactive app built using vanilla JavaScript, and the Open Trivia Database API, featuring timed questions, category selection, hints, and persistent high scores.",
     technologies: ["HTML5", "JavaScript", "CSS"],
-    imageUrl: "../public/img/quiz-app.png",
+    imageUrl: "/images/quiz-app.png",
     githubUrl: "https://github.com/jordanmakarevski99/quiz-project",
     liveUrl: "https://jordanmakarevski99.github.io/quiz-project/",
   },

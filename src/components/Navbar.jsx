@@ -15,6 +15,18 @@ const Navbar = ({ activeSection }) => {
     { name: 'Contact', href: '#contact' }
   ]
 
+  const handleLinkClick = e => {
+    setIsOpen(false)
+
+    const href = e.currentTarget.getAttribute('href')
+
+    setTimeout(() => {
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 50)
+  }
 
   return (
     <nav className='fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md shadow-md border-b border-border-color/50'>
@@ -67,41 +79,39 @@ const Navbar = ({ activeSection }) => {
                 <FiMenu className='block h-6 w-6' aria-hidden='true' />
               )}
             </button>
-          </div>{' '}
+          </div>
         </div>
       </div>
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className={`md:hidden overflow-hidden ${
-          isOpen ? 'border-t border-border-color/50' : ''
-        }`}
-        id='mobile-menu'
-      >
-        <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
-          {navLinks.map(link => {
-            const isActive = activeSection === link.href.substring(1)
-            return (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`
-                       block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200
-                       ${
-                         isActive
-                           ? 'text-primary bg-card'
-                           : 'text-text-secondary hover:text-primary hover:bg-card'
-                       }
-                     `}
-              >
-                {link.name}
-              </a>
-            )
-          })}
+
+      {isOpen && (
+        <div
+          className='md:hidden border-t border-border-color/50'
+          id='mobile-menu'
+        >
+          <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3'>
+            {navLinks.map(link => {
+              const isActive = activeSection === link.href.substring(1)
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={`
+                    block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200
+                    ${
+                      isActive
+                        ? 'text-primary bg-card'
+                        : 'text-text-secondary hover:text-primary hover:bg-card'
+                    }
+                  `}
+                >
+                  {link.name}
+                </a>
+              )
+            })}
+          </div>
         </div>
-      </motion.div>{' '}
+      )}
     </nav>
   )
 }

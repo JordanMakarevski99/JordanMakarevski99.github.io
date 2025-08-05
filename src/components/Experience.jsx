@@ -43,22 +43,19 @@ const Experience = ({ id, setActiveSection }) => {
 
         <div className='flex flex-col md:flex-row gap-4 md:gap-12 min-h-[450px]'>
           <motion.div
-            className='w-full md:w-1/4 overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 scrollbar-hide'
+            className='w-full md:w-1/4 pb-2 md:pb-0'
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className='flex flex-row md:flex-col md:space-x-0 md:space-y-2 w-full overflow-hidden'>
+            <div className='flex flex-col space-y-2 w-full'>
               {experience.map((job, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedIndex(index)}
                   className={`
-                    px-3 py-2 md:px-4 md:py-3 text-left rounded-md transition-all duration-300 ease-in-out
-                    min-w-[120px] md:w-full flex-1 md:flex-auto
-                    text-xs md:text-base
-                    whitespace-nowrap md:whitespace-normal
+                    px-3 py-2 md:px-4 md:py-3 text-left rounded-md transition-all duration-300 ease-in-out w-full text-base whitespace-normal
                     ${
                       selectedIndex === index
                         ? 'bg-primary/15 text-primary font-semibold shadow-sm'
@@ -67,16 +64,12 @@ const Experience = ({ id, setActiveSection }) => {
                   `}
                 >
                   <span className='font-medium'>{job.company}</span>
-                  <span className='block text-xs opacity-80 md:hidden'>
-                    {job.shortTitle || job.title.split(' ')[0]}
-                  </span>
-                  <span className='hidden md:block text-xs opacity-80'>
-                    {job.title}
-                  </span>
+                  <span className='block text-xs opacity-80'>{job.title}</span>
                 </button>
               ))}
             </div>
           </motion.div>
+
           <div className='md:w-3/4 relative'>
             <AnimatePresence mode='wait'>
               <motion.div
@@ -94,13 +87,15 @@ const Experience = ({ id, setActiveSection }) => {
                   @ {selectedJob.company}
                 </p>
                 <div className='flex flex-col sm:flex-row text-sm text-secondary mb-5 space-y-1 sm:space-y-0 sm:space-x-4'>
-                  <span className='flex items-left'>
-                    <FaCalendarAlt className='mr-2 mt-1 text-xs opacity-70' />
+                  <span className='flex items-center'>
+                    {' '}
+                    <FaCalendarAlt className='mr-2 mt-0 text-xs opacity-70' />{' '}
                     {selectedJob.duration}
                   </span>
                   {selectedJob.location && (
-                    <span className='flex items-left'>
-                      <FaMapMarkerAlt className='mr-2 mt-1 text-xs opacity-70' />
+                    <span className='flex items-center'>
+                      {' '}
+                      <FaMapMarkerAlt className='mr-2 mt-0 text-xs opacity-70' />{' '}
                       {selectedJob.location}
                     </span>
                   )}
